@@ -4,22 +4,26 @@ from Snake import Snake
 from Food import Food
 from Score import Score
 
+#parametry pola gry
 screen=Screen()
 screen.setup(width=600,height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
+#generowanie węża
 snake = Snake()
 food = Food()
 score = Score()
 
+#odsłuch klawiatury
 screen.listen()
 screen.onkey(snake.up,"Up")
 screen.onkey(snake.down, "Down")
 screen.onkey(snake.left,"Left")
 screen.onkey(snake.right, "Right")
 
+#uruchomienie gry
 game_is_on = True
 
 while game_is_on:
